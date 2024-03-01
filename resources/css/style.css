@@ -74,12 +74,51 @@ header .icon {
   padding-left: .75rem;
 }
 
+header .tablet {
+  display: none;
+}
+
 header .mobile {
   display: none;
 }
 
-@media only screen and (max-width: 760px) {
+#tablet_and_mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
   header .desktop {
+    display: none;
+  }
+
+  header .mobile {
+    display: none;
+  }
+
+  header .tablet {
+    display: flex;
+    justify-content:space-between;
+    width: 100%;
+  }
+
+  #header_logo {
+    display: inline-block;
+  }
+
+  header .tablet .button {
+    padding: .1875rem .5rem;
+    background-color: #9dc20b;
+    line-height: 1.6;
+    color: white;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  header .desktop {
+    display: none;
+  }
+
+  header .tablet {
     display: none;
   }
 
@@ -168,7 +207,7 @@ header .mobile {
   padding: 1.25rem 7.25rem;
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 768px) {
   #sign-up-section {
     align-items: center;
     justify-content: center;
@@ -266,6 +305,11 @@ header .mobile {
     font-size: .875rem;
     line-height: 1.4;
   }
+
+  #features-section {
+    padding: 3%;
+  }
+
 }
 
 @media only screen and (max-width: 760px) {
@@ -312,8 +356,8 @@ header .mobile {
 }
 
 #filters-section img {
-  max-height: 500px;
-  width: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 @media only screen and (max-width: 760px) {
